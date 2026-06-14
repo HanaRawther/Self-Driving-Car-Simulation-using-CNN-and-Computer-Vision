@@ -22,7 +22,7 @@ Environment Module: Weather classification using visual features
 Control Module: Speed adjustment and decision-making logic
 Dataset
 
-Traffic sign images and road scene data were used for training and testing the CNN model. (
+Traffic sign images and road scene data were used for training and testing the CNN model. 
 
 Tools and Technologies:
 MATLAB
@@ -35,7 +35,7 @@ Results:
 The system successfully demonstrates simulated autonomous driving behavior by integrating perception outputs with control logic. 
 The CNN model achieves effective traffic sign classification, while vision-based modules handle lane and environment detection.
 
-How to Run
+How to Run:
 Open the MATLAB project folder
 Load the main script file
 Run the simulation script
