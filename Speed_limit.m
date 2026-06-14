@@ -1,0 +1,46 @@
+
+%%  CAR SPEED SIMULATION (CAR SPEED FIXED AT 50 KM/H)
+clc; clear; close all;
+
+%% Initialize Car Speed (km/h)
+carSpeed = 50; % fixed car speed
+disp(['Initial Car Speed: ', num2str(carSpeed), ' km/h']);
+
+%% Define New Images (Speed Limit Signs)
+imageFiles = {'speed_30.jpg', 'speed_50.jpg', 'speed_70.jpg'};
+imageTitles = {'Speed Limit 30', 'Speed Limit 50', 'Speed Limit 70'};
+
+%% Simulation Loop
+for i = 1:length(imageFiles)
+    % Step 1: Read Image
+    img = imread(imageFiles{i});
+    
+    % Step 2: Detect Speed Limit from Image Name (Simulated)
+    speedStr = regexp(imageFiles{i}, '\d+', 'match');
+    speedLimit = str2double(speedStr{1});
+    
+    % Step 3: Decide Action
+    if carSpeed > speedLimit
+        action = 'Over Speeding';
+    elseif carSpeed == speedLimit
+        action = 'Maintaining Speed';
+    else
+        action = 'Maintaining Speed';
+    end
+    
+    % Step 4: Display Image and Speed Info
+    figure;
+    imshow(img);
+    titleText = sprintf('%s\nAction: %s\nCurrent Speed: %d km/h', ...
+        imageTitles{i}, action, carSpeed);
+    title(titleText, 'FontSize', 14);
+    
+    % Step 5: Print Info
+    disp('----------------------------------------');
+    disp(['Image: ', imageTitles{i}]);
+    disp(['Detected Speed Limit: ', num2str(speedLimit), ' km/h']);
+    disp(['Action: ', action]);
+    disp(['Car Speed: ', num2str(carSpeed), ' km/h']);
+end
+
+disp('Simulation Completed. Car speed fixed at 50 km/h.');
