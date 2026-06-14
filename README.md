@@ -1,9 +1,8 @@
-Overview
-
+Overview:
 This project is a MATLAB-based autonomous driving simulation that integrates deep learning and computer vision techniques to model 
 perception and decision-making in self-driving cars. The system focuses on traffic sign recognition, lane detection, weather classification, and speed control.
 
-Features
+Features:
 Traffic sign recognition using GoogLeNet CNN with transfer learning
 Lane detection using classical computer vision techniques
 Weather condition classification module
@@ -16,24 +15,23 @@ The system combines convolutional neural networks with classical image processin
 fine-tuned using transfer learning for traffic sign classification. Computer vision algorithms are used for lane detection and environmental analysis.
 The outputs from all modules are integrated to simulate autonomous vehicle decision-making.
 
-Modules
+Modules:
 Perception Module: Traffic sign recognition using CNN
 Lane Detection Module: Edge detection and image processing techniques
 Environment Module: Weather classification using visual features
 Control Module: Speed adjustment and decision-making logic
 Dataset
 
-Traffic sign images and road scene data were used for training and testing the CNN model. (Specify dataset source here if applicable, 
-such as GTSRB or custom dataset.)
+Traffic sign images and road scene data were used for training and testing the CNN model. (
 
-Tools and Technologies
+Tools and Technologies:
 MATLAB
 Deep Learning Toolbox
 Computer Vision Toolbox
 GoogLeNet (Transfer Learning)
 Convolutional Neural Networks (CNN)
-Results
 
+Results:
 The system successfully demonstrates simulated autonomous driving behavior by integrating perception outputs with control logic. 
 The CNN model achieves effective traffic sign classification, while vision-based modules handle lane and environment detection.
 
